@@ -1,0 +1,360 @@
+[2025-07-30 12:45:55] [INFO] [main.py:24] - Запуск приложения: инициализация БД
+[2025-07-30 12:45:55] [DEBUG] [database.py:33] - Начало инициализации базы данных...
+[2025-07-30 12:45:55] [CRITICAL] [database.py:42] - Неожиданная ошибка при инициализации БД: InvalidPasswordError('password authentication failed for user "sttore_admin"').
+[2025-07-30 15:28:21] [INFO] [main.py:26] - Запуск приложения: инициализация БД
+[2025-07-30 15:28:21] [DEBUG] [database.py:33] - Начало инициализации базы данных...
+[2025-07-30 15:28:22] [INFO] [database.py:37] - База данных успешно инициализирована.
+[2025-07-30 15:28:22] [INFO] [main.py:28] - Приложение успешно запущено. Соединение с базой данных установлено.
+[2025-07-30 15:28:22] [INFO] [main.py:37] - Планировщик запущен, задача будет выполняться каждые сутки
+[2025-07-30 15:29:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:29:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:29:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:29:26] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:29:26] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:29:29] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:29:29] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:29:29] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:29:29] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:29:29] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:29:29] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:29:29] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:30:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:30:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:30:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:30:22] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:30:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:30:25] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:30:25] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:30:25] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:30:25] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:30:25] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:30:25] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:30:25] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:31:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:31:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:31:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:31:25] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:31:25] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:31:27] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:31:27] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:31:27] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:31:27] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:31:27] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:31:27] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:31:27] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:32:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:32:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:32:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:32:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:32:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:32:25] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:32:25] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:32:25] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:32:25] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:32:25] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:32:25] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:32:25] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:33:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:33:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:33:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:33:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:33:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:33:26] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:33:26] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:33:26] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:33:26] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:33:26] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:33:26] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:33:26] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:34:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:34:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:34:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:34:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:34:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:34:25] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:34:25] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:34:25] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:34:25] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:34:25] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:34:25] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:34:25] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:35:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:35:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:35:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:35:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:35:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:35:25] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:35:25] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:35:25] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:35:25] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:35:25] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:35:25] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:35:25] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:36:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:36:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:36:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:36:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:36:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:36:24] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:36:24] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:36:24] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:36:24] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:36:24] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:36:24] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:36:24] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:37:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:37:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:37:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:37:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:37:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:37:27] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:37:27] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:37:27] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:37:27] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:37:27] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:37:27] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:37:27] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:38:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:38:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:38:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:38:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:38:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:38:26] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:38:26] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:38:26] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:38:26] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:38:26] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:38:26] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:38:26] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:39:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:39:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:39:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:39:22] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:39:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:39:23] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:39:23] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:39:23] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:39:23] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:39:23] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:39:23] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:39:23] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:40:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:40:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:40:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:40:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:40:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:40:28] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:40:28] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:40:28] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:40:28] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:40:28] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:40:28] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:40:28] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:41:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:41:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:41:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:41:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:41:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:41:24] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:41:24] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:41:24] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:41:24] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:41:24] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:41:24] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:41:24] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:42:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:42:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:42:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:42:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:42:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:42:26] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:42:26] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:42:26] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:42:26] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:42:26] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:42:26] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:42:26] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:43:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:43:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:43:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:43:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:43:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:43:25] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:43:25] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:43:25] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:43:25] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:43:25] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:43:25] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:43:25] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:44:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:44:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:44:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:44:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:44:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:44:24] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:44:24] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:44:24] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:44:24] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:44:24] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:44:24] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:44:24] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:45:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:45:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:45:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:45:24] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:45:24] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:45:26] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:45:26] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:45:26] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:45:26] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:45:26] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:45:26] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:45:26] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:46:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:46:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:46:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:46:26] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:46:26] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:46:27] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:46:27] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:46:27] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:46:27] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:46:27] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:46:27] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:46:27] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:47:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:47:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:47:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:47:25] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:47:25] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:47:28] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:47:28] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:47:28] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:47:28] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:47:28] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:47:28] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:47:28] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:48:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:48:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:48:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:48:23] [INFO] [views.py:61] - Успешный вызов rateSTTOREtoSTT: raw value = 2000000000000
+[2025-07-30 15:48:23] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTtoSTTORE
+[2025-07-30 15:48:24] [INFO] [views.py:61] - Успешный вызов rateSTTtoSTTORE: raw value = 3000000000000
+[2025-07-30 15:48:24] [INFO] [views.py:76] - Получено: buy = 3000.0, sell = 2000.0
+[2025-07-30 15:48:24] [INFO] [database.py:50] - Открытие сессии с БД...
+[2025-07-30 15:48:24] [INFO] [database.py:53] - Сессия с БД успешно открыта.
+[2025-07-30 15:48:24] [INFO] [views.py:99] - Курс успешно записан: buy=3000.0, sell=2000.0, date=2025-07-30
+[2025-07-30 15:48:24] [INFO] [database.py:59] - Закрытие сессии с БД.
+[2025-07-30 15:48:24] [INFO] [main.py:20] - Задача выполнена успешно
+[2025-07-30 15:49:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:49:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:49:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:50:00] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3a710>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:50:00] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3a710>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:50:00] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3a710>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:50:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:50:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:50:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:50:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3ad50>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:50:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3ad50>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:50:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3ad50>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:51:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:51:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:51:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:51:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b610>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:51:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b610>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:51:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b610>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:52:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:52:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:52:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:52:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b890>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:52:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b890>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:52:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b890>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:53:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:53:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:53:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:53:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3bd90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:53:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3bd90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:53:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3bd90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:54:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:54:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:54:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:54:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa82d0>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:54:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa82d0>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:54:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa82d0>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:55:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:55:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:55:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:55:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3bd90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:55:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3bd90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:55:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3bd90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:56:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:56:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:56:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:56:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b890>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:56:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b890>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:56:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b890>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:57:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:57:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:57:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:57:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b610>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:57:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b610>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:57:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3b610>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:58:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:58:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:58:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:58:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3ad50>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:58:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3ad50>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:58:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3ad50>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:59:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 15:59:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 15:59:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 15:59:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3a710>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:59:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3a710>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 15:59:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafa3a710>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:00:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:00:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:00:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:00:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa8410>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:00:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa8410>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:00:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa8410>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:01:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:01:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:01:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:01:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa8b90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:01:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa8b90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:01:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa8b90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:02:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:02:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:02:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:02:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9090>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:02:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9090>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:02:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9090>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:03:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:03:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:03:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:03:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9590>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:03:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9590>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:03:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9590>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:04:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:04:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:04:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:04:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9a90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:04:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9a90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:04:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9a90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:05:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:05:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:05:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:05:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9f90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:05:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9f90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:05:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafaa9f90>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:06:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:06:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:06:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:06:30] [ERROR] [views.py:64] - Ошибка при вызове rateSTTOREtoSTT: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafb97110>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:06:30] [CRITICAL] [views.py:81] - Ошибка при получении курсов: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafb97110>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:06:30] [ERROR] [main.py:22] - Ошибка в запланированной задаче: ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'arb1.arbitrum.io\', port=443): Max retries exceeded with url: /rpc (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffffafb97110>: Failed to resolve \'arb1.arbitrum.io\' ([Errno -3] Temporary failure in name resolution)"))'))
+[2025-07-30 16:07:22] [INFO] [main.py:18] - Запуск запланированной задачи получения курса
+[2025-07-30 16:07:22] [DEBUG] [views.py:68] - Начинаем получение курсов обмена STTORE ⇄ STT
+[2025-07-30 16:07:22] [DEBUG] [views.py:55] - Вызов метода контракта: rateSTTOREtoSTT
+[2025-07-30 16:07:28] [INFO] [main.py:42] - Планировщик остановлен

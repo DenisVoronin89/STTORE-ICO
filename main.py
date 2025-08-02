@@ -7,11 +7,14 @@ from datetime import date
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from apscheduler.triggers.cron import CronTrigger
+from sqlalchemy import select, tuple_
+from collections import OrderedDict
 
 from logger import get_logger
 from dotenv import load_dotenv
-from database import init_db
+from database import init_db, get_db_session
 from views import fetch_and_store_exchange_rate, calculate_monthly_stats
+from models import MonthlyStats, ExchangeRate, MonthlyStats
 
 logger = get_logger()
 load_dotenv()

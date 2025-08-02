@@ -2,7 +2,7 @@ services:
   nginx: # Добавляем сервис nginx
     image: nginx:latest
     volumes:
-      - /var/www/STTORE-ICO/nginx/default.conf:/etc/nginx/conf.d/default.conf  # Только для изменения default.conf
+      - /var/www/nginx/default.conf:/etc/nginx/conf.d/default.conf  # Только для изменения default.conf
     ports:
       - '80:80'  # Открываем порт для статики
       - '443:443'  # Открываем порт для HTTPS

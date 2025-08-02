@@ -80,7 +80,7 @@ async def shutdown_event():
 
 
 # Эндпоинт для получения курса покупки-продажи токена по контракту для первого графика
-@app.get("/exchange_rates")
+@app.get("/api/exchange_rates")
 async def exchange_rates_endpoint(
     start_date: Union[str, date] = Query(..., description="Дата начала, формат YYYY-MM-DD"),
     end_date: Union[str, date] = Query(..., description="Дата конца, формат YYYY-MM-DD"),
@@ -97,7 +97,7 @@ async def exchange_rates_endpoint(
 
 
 # Эндпоинт для добавления информации о транзакции.
-@app.post("/transaction")
+@app.post("/api/transaction")
 async def add_transaction(
     transaction_hash: str,
     amount: float,
@@ -129,28 +129,21 @@ async def add_transaction(
 
 
 # Эндпоинт для получения суммы транзакций по контракту (помесячно) для второго графика
-@app.get("/monthly_stats")
+@app.get("/api/monthly_stats")
 async def get_monthly_stats(
     from_year: int = Query(..., alias="from_year"),
     from_month: int = Query(..., alias="from_month"),
     to_year: int = Query(..., alias="to_year"),
     to_month: int = Query(..., alias="to_month"),
 ):
-    """
-    Возвращает статистику по каждому месяцу в указанном диапазоне (включительно).
-    Если статистика за месяц отсутствует — заполняется нулями.
+    logger.debug(f"Получен запрос /monthly_stats с параметрами: "
+                 f"from_year={from_year}, from_month={from_month}, to_year={to_year}, to_month={to_month}")
 
-    :param from_year: Год начала диапазона
-    :param from_month: Месяц начала диапазона
-    :param to_year: Год конца диапазона
-    :param to_month: Месяц конца диапазона
-    :return: Словарь вида {'YYYY-MM': {total_amount, total_count, all_time_count}}
-    :raises HTTPException 400: если диапазон некорректный
-    """
     if (to_year, to_month) < (from_year, from_month):
+        logger.error("Некорректный диапазон дат: конец раньше начала")
         raise HTTPException(status_code=400, detail="Некорректный диапазон")
 
-    # Сформировать список (год, месяц) включительно
+    # Сформировать список месяцев
     months = []
     year, month = from_year, from_month
     while (year, month) <= (to_year, to_month):
@@ -160,33 +153,45 @@ async def get_monthly_stats(
             month = 1
         else:
             month += 1
+    logger.debug(f"Сформирован список месяцев для выборки: {months}")
 
     async with get_db_session() as session:
-        result = await session.execute(
-            select(MonthlyStats).where(
-                tuple_(MonthlyStats.year, MonthlyStats.month).in_(months)
+        logger.debug("Открыта сессия с базой данных")
+        try:
+            result = await session.execute(
+                select(MonthlyStats).where(
+                    tuple_(MonthlyStats.year, MonthlyStats.month).in_(months)
+                )
             )
-        )
-        stats = result.scalars().all()
+            stats = result.scalars().all()
+            logger.debug(f"Получено из базы {len(stats)} записей статистики")
+        except Exception as e:
+            logger.exception(f"Ошибка при выполнении запроса к базе: {e}")
+            raise HTTPException(status_code=500, detail="Ошибка доступа к базе данных")
 
-        # мапа {(year, month): stat}
+        # Создаем мапу для удобного поиска
         stats_map = {(s.year, s.month): s for s in stats}
+        logger.debug(f"Создана карта статистики по годам и месяцам")
 
         response = OrderedDict()
         for year, month in months:
             key = f"{year:04d}-{month:02d}"
             stat = stats_map.get((year, month))
             if stat:
+                logger.debug(f"Добавляем данные за {key}: amount={stat.total_amount}, count={stat.total_count}, all_time_count={stat.all_time_count}")
                 response[key] = {
                     "total_amount": stat.total_amount,
                     "total_count": stat.total_count,
                     "all_time_count": stat.all_time_count
                 }
             else:
+                logger.debug(f"Данных за {key} нет, заполняем нулями")
                 response[key] = {
                     "total_amount": 0,
                     "total_count": 0,
                     "all_time_count": 0
                 }
 
-        return response
+    logger.info(f"Отправляем ответ с {len(response)} месяцами статистики")
+    return response
+

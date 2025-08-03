@@ -11,11 +11,12 @@ from sqlalchemy.exc import SQLAlchemyError
 from datetime import datetime, date
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import IntegrityError
-from models import ExchangeRate, Transaction, MonthlyStats
 
+from models import ExchangeRate, Transaction, MonthlyStats
 from logger import get_logger
 from database import get_db_session
 from dotenv import load_dotenv
+
 
 logger = get_logger()
 load_dotenv()

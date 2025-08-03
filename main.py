@@ -1,6 +1,7 @@
 import asyncio
 import os
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.status import HTTP_403_FORBIDDEN
 from typing import List, Union
 from datetime import date
@@ -13,7 +14,7 @@ from collections import OrderedDict
 from logger import get_logger
 from dotenv import load_dotenv
 from database import init_db, get_db_session
-from views import fetch_and_store_exchange_rate, calculate_monthly_stats
+from views import fetch_and_store_exchange_rate, calculate_monthly_stats, get_exchange_rates, get_exchange_rates_range
 from models import MonthlyStats, ExchangeRate, MonthlyStats
 
 logger = get_logger()
@@ -29,6 +30,16 @@ app = FastAPI(
     redoc_url="/redoc" if ENABLE_DOCS else None,
     openapi_url="/openapi.json" if ENABLE_DOCS else None
 )
+
+# Настройка CORS (Это Максу - разрешить доступ фронту, разрешить отправлять мне запросы)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Разрешенные источники
+    allow_credentials=True,
+    allow_methods=["*"],  # Разрешенные методы
+    allow_headers=["*"],  # Разрешенные заголовки
+)
+
 
 scheduler = AsyncIOScheduler()
 

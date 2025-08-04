@@ -187,24 +187,16 @@ async def get_monthly_stats(
         stats_map = {(s.year, s.month): s for s in stats}
         logger.debug(f"Создана карта статистики по годам и месяцам")
 
-        response = OrderedDict()
-        for year, month in months:
-            key = f"{year:04d}-{month:02d}"
-            stat = stats_map.get((year, month))
-            if stat:
-                logger.debug(f"Добавляем данные за {key}: amount={stat.total_amount}, count={stat.total_count}, all_time_count={stat.all_time_count}")
-                response[key] = {
-                    "total_amount": stat.total_amount,
-                    "total_count": stat.total_count,
-                    "all_time_count": stat.all_time_count
-                }
-            else:
-                logger.debug(f"Данных за {key} нет, заполняем нулями")
-                response[key] = {
-                    "total_amount": 0,
-                    "total_count": 0,
-                    "all_time_count": 0
-                }
+        response = [
+            {
+                "date": f"{year:04d}-{month:02d}",
+                "total_amount": (stat.total_amount if stat else 0),
+                "total_count": (stat.total_count if stat else 0),
+                "all_time_count": (stat.all_time_count if stat else 0),
+            }
+            for year, month in months
+            for stat in [stats_map.get((year, month))]
+        ]
 
     logger.info(f"Отправляем ответ с {len(response)} месяцами статистики")
     return response

@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.status import HTTP_403_FORBIDDEN
 from typing import List, Union
-from datetime import date
+from datetime import date, datetime
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from apscheduler.triggers.cron import CronTrigger
@@ -196,16 +196,17 @@ async def get_monthly_stats(
         stats_map = {(s.year, s.month): s for s in stats}
         logger.debug(f"Создана карта статистики по годам и месяцам")
 
-        response = [
-            {
-                "date": f"{year:04d}-{month:02d}",
-                "total_amount": (stat.total_amount if stat else 0),
-                "total_count": (stat.total_count if stat else 0),
-                "all_time_count": (stat.all_time_count if stat else 0),
-            }
-            for year, month in months
-            for stat in [stats_map.get((year, month))]
-        ]
+    response = [
+        {
+            "date": f"{year:04d}-{month:02d}",
+            "month": datetime(year, month, 1).strftime("%b"),  # сокращенное название месяца
+            "total_amount": (stat.total_amount if stat else 0),
+            "total_count": (stat.total_count if stat else 0),
+            "all_time_count": (stat.all_time_count if stat else 0),
+        }
+        for year, month in months
+        for stat in [stats_map.get((year, month))]
+    ]
 
     logger.info(f"Отправляем ответ с {len(response)} месяцами статистики")
     return response

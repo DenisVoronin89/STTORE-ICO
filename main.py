@@ -68,9 +68,18 @@ async def startup_event():
     await init_db()
     logger.info("Приложение успешно запущено. Соединение с базой данных установлено.")
 
+    # Триггер для тестов
+    # scheduler.add_job(
+    #     scheduled_task,
+    #     trigger=IntervalTrigger(hours=24),
+    #     id="fetch_exchange_rate_job",
+    #     replace_existing=True
+    # )
+
+    # Запускать в 12:00 каждый день
     scheduler.add_job(
         scheduled_task,
-        trigger=IntervalTrigger(hours=24),
+        trigger=CronTrigger(hour=12, minute=0),
         id="fetch_exchange_rate_job",
         replace_existing=True
     )

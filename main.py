@@ -15,7 +15,7 @@ from logger import get_logger
 from dotenv import load_dotenv
 from database import init_db, get_db_session
 from views import fetch_and_store_exchange_rate, calculate_monthly_stats, get_exchange_rates, get_exchange_rates_range
-from models import MonthlyStats, ExchangeRate, MonthlyStats
+from models import MonthlyStats, ExchangeRate, MonthlyStats, Transaction
 
 logger = get_logger()
 load_dotenv()

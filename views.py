@@ -6,7 +6,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from typing import Tuple, Union, List
 from web3 import Web3
-from sqlalchemy import select
+from sqlalchemy import select, text
 from sqlalchemy.exc import SQLAlchemyError
 from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -203,6 +203,9 @@ async def calculate_monthly_stats():
         # Сохраняем статистику в БД
         async with get_db_session() as session:
             try:
+                await session.execute(text(
+                    "SELECT setval('monthly_stats_id_seq', COALESCE((SELECT MAX(id) FROM monthly_stats), 0) + 1, false)"
+                ))
                 stat = MonthlyStats(
                     year=year,
                     month=month,

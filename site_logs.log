@@ -19,3 +19,368 @@
 [2025-08-14 19:50:07] [INFO] [database.py:51] - Открытие сессии с БД...
 [2025-08-14 19:50:07] [INFO] [database.py:54] - Сессия с БД успешно открыта.
 [2025-08-14 19:50:07] [INFO] [database.py:60] - Закрытие сессии с БД.
+[2025-09-25 05:22:23] [INFO] [main.py:102] - Планировщик остановлен
+[2025-10-31 13:08:07] [INFO] [main.py:67] - Запуск приложения: инициализация БД
+[2025-10-31 13:08:07] [DEBUG] [database.py:34] - Начало инициализации базы данных...
+[2025-10-31 13:08:07] [INFO] [database.py:38] - База данных успешно инициализирована.
+[2025-10-31 13:08:07] [INFO] [main.py:69] - Приложение успешно запущено. Соединение с базой данных установлено.
+[2025-10-31 13:08:07] [INFO] [main.py:96] - Планировщик запущен, задача будет выполняться каждые сутки
+[2025-10-31 13:08:12] [ERROR] [test_contract_method.py:135] - Ошибка при тестировании: ('execution reverted', '0x')
+Traceback (most recent call last):
+  File "/app/test_contract_method.py", line 60, in test_contract_method
+    total_distributed_raw = await loop.run_in_executor(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/app/test_contract_method.py", line 62, in <lambda>
+    lambda: contract.functions.getTotalDistributedInTokens().call()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/web3/contract/contract.py", line 291, in call
+    return call_contract_function(
+        self.w3,
+    ...<11 lines>...
+        **self.kwargs or {},
+    )
+  File "/usr/local/lib/python3.13/site-packages/web3/contract/utils.py", line 153, in call_contract_function
+    return_data = w3.eth.call(
+        call_transaction,
+    ...<2 lines>...
+        ccip_read_enabled=ccip_read_enabled,
+    )
+  File "/usr/local/lib/python3.13/site-packages/web3/eth/eth.py", line 247, in call
+    return self._durin_call(transaction, block_identifier, state_override)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/web3/eth/eth.py", line 266, in _durin_call
+    return self._call(transaction, block_identifier, state_override)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/web3/module.py", line 112, in caller
+    result = w3.manager.request_blocking(
+        method_str, params, error_formatters, null_result_formatters
+    )
+  File "/usr/local/lib/python3.13/site-packages/web3/manager.py", line 232, in request_blocking
+    return self.formatted_response(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        response, params, error_formatters, null_result_formatters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/web3/manager.py", line 198, in formatted_response
+    validate_rpc_response_and_raise_if_error(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        response,
+        ^^^^^^^^^
+    ...<3 lines>...
+        params=params,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/web3/_utils/validation.py", line 397, in validate_rpc_response_and_raise_if_error
+    response = apply_error_formatters(error_formatters, response)
+  File "/usr/local/lib/python3.13/site-packages/web3/_utils/formatters.py", line 146, in apply_error_formatters
+    formatted_resp = pipe(response, error_formatters)
+  File "cytoolz/functoolz.pyx", line 685, in cytoolz.functoolz.pipe
+  File "cytoolz/functoolz.pyx", line 660, in cytoolz.functoolz.c_pipe
+  File "/usr/local/lib/python3.13/site-packages/web3/_utils/error_formatters_utils.py", line 166, in raise_contract_logic_error_on_revert
+    raise ContractLogicError(message, data=data)
+web3.exceptions.ContractLogicError: ('execution reverted', '0x')
+[2025-10-31 13:12:24] [INFO] [main.py:102] - Планировщик остановлен
+[2025-10-31 13:12:27] [INFO] [main.py:67] - Запуск приложения: инициализация БД
+[2025-10-31 13:12:27] [DEBUG] [database.py:34] - Начало инициализации базы данных...
+[2025-10-31 13:12:27] [INFO] [database.py:38] - База данных успешно инициализирована.
+[2025-10-31 13:12:27] [INFO] [main.py:69] - Приложение успешно запущено. Соединение с базой данных установлено.
+[2025-10-31 13:12:27] [INFO] [main.py:96] - Планировщик запущен, задача будет выполняться каждые сутки
+[2025-10-31 13:12:28] [ERROR] [test_contract_method.py:131] - Ошибка при тестировании: ('execution reverted', '0x')
+Traceback (most recent call last):
+  File "/app/test_contract_method.py", line 60, in test_contract_method
+    total_amount = await loop.run_in_executor(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/app/test_contract_method.py", line 62, in <lambda>
+    lambda: contract.functions.getTotalDistributedInTokens(9).call()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/web3/contract/contract.py", line 291, in call
+    return call_contract_function(
+        self.w3,
+    ...<11 lines>...
+        **self.kwargs or {},
+    )
+  File "/usr/local/lib/python3.13/site-packages/web3/contract/utils.py", line 153, in call_contract_function
+    return_data = w3.eth.call(
+        call_transaction,
+    ...<2 lines>...
+        ccip_read_enabled=ccip_read_enabled,
+    )
+  File "/usr/local/lib/python3.13/site-packages/web3/eth/eth.py", line 247, in call
+    return self._durin_call(transaction, block_identifier, state_override)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/web3/eth/eth.py", line 266, in _durin_call
+    return self._call(transaction, block_identifier, state_override)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/web3/module.py", line 112, in caller
+    result = w3.manager.request_blocking(
+        method_str, params, error_formatters, null_result_formatters
+    )
+  File "/usr/local/lib/python3.13/site-packages/web3/manager.py", line 232, in request_blocking
+    return self.formatted_response(
+           ~~~~~~~~~~~~~~~~~~~~~~~^
+        response, params, error_formatters, null_result_formatters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/web3/manager.py", line 198, in formatted_response
+    validate_rpc_response_and_raise_if_error(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        response,
+        ^^^^^^^^^
+    ...<3 lines>...
+        params=params,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/web3/_utils/validation.py", line 397, in validate_rpc_response_and_raise_if_error
+    response = apply_error_formatters(error_formatters, response)
+  File "/usr/local/lib/python3.13/site-packages/web3/_utils/formatters.py", line 146, in apply_error_formatters
+    formatted_resp = pipe(response, error_formatters)
+  File "cytoolz/functoolz.pyx", line 685, in cytoolz.functoolz.pipe
+  File "cytoolz/functoolz.pyx", line 660, in cytoolz.functoolz.c_pipe
+  File "/usr/local/lib/python3.13/site-packages/web3/_utils/error_formatters_utils.py", line 166, in raise_contract_logic_error_on_revert
+    raise ContractLogicError(message, data=data)
+web3.exceptions.ContractLogicError: ('execution reverted', '0x')
+[2025-10-31 13:26:46] [INFO] [main.py:102] - Планировщик остановлен
+[2025-10-31 13:26:48] [INFO] [main.py:67] - Запуск приложения: инициализация БД
+[2025-10-31 13:26:48] [DEBUG] [database.py:34] - Начало инициализации базы данных...
+[2025-10-31 13:26:48] [INFO] [database.py:38] - База данных успешно инициализирована.
+[2025-10-31 13:26:48] [INFO] [main.py:69] - Приложение успешно запущено. Соединение с базой данных установлено.
+[2025-10-31 13:26:48] [INFO] [main.py:96] - Планировщик запущен, задача будет выполняться каждые сутки
+[2025-10-31 13:26:49] [INFO] [database.py:51] - Открытие сессии с БД...
+[2025-10-31 13:26:49] [INFO] [database.py:54] - Сессия с БД успешно открыта.
+[2025-10-31 13:26:49] [ERROR] [database.py:57] - Ошибка в контексте сессии: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "monthly_stats_pkey"
+DETAIL:  Key (id)=(1) already exists.
+[SQL: INSERT INTO monthly_stats (year, month, total_amount) VALUES ($1::INTEGER, $2::INTEGER, $3::FLOAT) RETURNING monthly_stats.id]
+[parameters: (2099, 13, 3939780)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2025-10-31 13:26:49] [INFO] [database.py:60] - Закрытие сессии с БД.
+[2025-10-31 13:26:49] [ERROR] [test_contract_method.py:131] - Ошибка при тестировании: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "monthly_stats_pkey"
+DETAIL:  Key (id)=(1) already exists.
+[SQL: INSERT INTO monthly_stats (year, month, total_amount) VALUES ($1::INTEGER, $2::INTEGER, $3::FLOAT) RETURNING monthly_stats.id]
+[parameters: (2099, 13, 3939780)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 545, in _prepare_and_execute
+    self._rows = deque(await prepared_stmt.fetch(*parameters))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/asyncpg/prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/asyncpg/prepared_stmt.py", line 267, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+        lambda protocol: protocol.bind_execute(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self._state, args, '', limit, True, timeout))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/asyncpg/prepared_stmt.py", line 256, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 206, in bind_execute
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "monthly_stats_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._prepare_and_execute(operation, parameters)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 558, in _prepare_and_execute
+    self._handle_exception(error)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 508, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 792, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.IntegrityError: <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "monthly_stats_pkey"
+DETAIL:  Key (id)=(1) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/test_contract_method.py", line 83, in test_contract_method
+    await session.commit()
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/ext/asyncio/session.py", line 1014, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 203, in greenlet_spawn
+    result = context.switch(value)
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4345, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4480, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4441, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.mapper,
+        ^^^^^^^^^^^^
+        uow.states_for_mapper_hierarchy(self.mapper, False, False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uow,
+        ^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        base_mapper,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        insert,
+        ^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+        statement,
+        params,
+        execution_options=execution_options,
+    )
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1413, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1840, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1980, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2349, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1961, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 944, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._prepare_and_execute(operation, parameters)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 558, in _prepare_and_execute
+    self._handle_exception(error)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 508, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 792, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.IntegrityError: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "monthly_stats_pkey"
+DETAIL:  Key (id)=(1) already exists.
+[SQL: INSERT INTO monthly_stats (year, month, total_amount) VALUES ($1::INTEGER, $2::INTEGER, $3::FLOAT) RETURNING monthly_stats.id]
+[parameters: (2099, 13, 3939780)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+[2025-10-31 13:29:48] [INFO] [database.py:51] - Открытие сессии с БД...
+[2025-10-31 13:29:48] [INFO] [database.py:54] - Сессия с БД успешно открыта.
+[2025-10-31 13:29:48] [INFO] [database.py:60] - Закрытие сессии с БД.
+[2025-10-31 13:36:04] [INFO] [main.py:102] - Планировщик остановлен
+[2025-10-31 13:36:07] [INFO] [main.py:67] - Запуск приложения: инициализация БД
+[2025-10-31 13:36:07] [DEBUG] [database.py:34] - Начало инициализации базы данных...
+[2025-10-31 13:36:07] [INFO] [database.py:38] - База данных успешно инициализирована.
+[2025-10-31 13:36:07] [INFO] [main.py:69] - Приложение успешно запущено. Соединение с базой данных установлено.
+[2025-10-31 13:36:07] [INFO] [main.py:96] - Планировщик запущен, задача будет выполняться каждые сутки
+[2025-10-31 13:36:09] [INFO] [views.py:183] - Начинаем сбор статистики за 10.2025
+[2025-10-31 13:36:09] [DEBUG] [views.py:192] - Вызов метода контракта: getTotalDistributedInTokens(9)
+[2025-10-31 13:36:11] [INFO] [views.py:198] - Получено из контракта: total_amount_raw (tokens) = 3939780
+[2025-10-31 13:36:11] [INFO] [views.py:201] - После деления на 1300000: total_amount = 3.031
+[2025-10-31 13:36:11] [INFO] [database.py:51] - Открытие сессии с БД...
+[2025-10-31 13:36:11] [INFO] [database.py:54] - Сессия с БД успешно открыта.
+[2025-10-31 13:36:11] [INFO] [views.py:215] - Статистика успешно сохранена за 10.2025: total_amount = 3.031
+[2025-10-31 13:36:11] [INFO] [database.py:60] - Закрытие сессии с БД.
+[2025-10-31 13:36:33] [INFO] [main.py:102] - Планировщик остановлен

@@ -30,8 +30,6 @@ class MonthlyStats(Base):
     year = Column(Integer, nullable=False)
     month = Column(Integer, nullable=False)
     total_amount = Column(Float, default=0, nullable=False)
-    total_count = Column(Integer, default=0, nullable=False)
-    all_time_count = Column(Integer, default=0, nullable=False)
 
     __table_args__ = (
         UniqueConstraint("year", "month", name="uniq_monthly_stats"),

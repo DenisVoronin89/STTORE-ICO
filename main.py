@@ -200,9 +200,7 @@ async def get_monthly_stats(
         {
             "date": f"{year:04d}-{month:02d}",
             "month": datetime(year, month, 1).strftime("%b"),  # сокращенное название месяца
-            "total_amount": (stat.total_amount if stat else 0),
-            "total_count": (stat.total_count if stat else 0),
-            "all_time_count": (stat.all_time_count if stat else 0),
+            "total_amount": (stat.total_amount if stat else 0)
         }
         for year, month in months
         for stat in [stats_map.get((year, month))]

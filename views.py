@@ -3,12 +3,12 @@
 import asyncio
 import os
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date
+from datetime import date, timedelta
 from typing import Tuple, Union, List
 from web3 import Web3
 from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
-from datetime import datetime, date
+from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import IntegrityError
 
@@ -33,6 +33,13 @@ ABI = [
         "constant": True,
         "inputs": [],
         "name": "rateSTTtoSTTORE",
+        "outputs": [{"name": "", "type": "uint256"}],
+        "type": "function",
+    },
+    {
+        "constant": True,
+        "inputs": [{"name": "decimals", "type": "uint8"}],
+        "name": "getTotalDistributedInTokens",
         "outputs": [{"name": "", "type": "uint256"}],
         "type": "function",
     },
@@ -154,19 +161,17 @@ async def get_exchange_rates_range(
             raise
 
 
-# Вычисление статистики транзакций за текущий месяц
+# Получение статистики распределенных токенов за текущий месяц
 async def calculate_monthly_stats():
     """
-    Вычисляет статистику транзакций за текущий месяц и сохраняет её в таблицу MonthlyStats.
+    Получает общую сумму распределенных токенов STT с контракта и сохраняет её в таблицу MonthlyStats.
 
     Статистика включает:
     - year, month — текущие год и месяц
-    - total_amount — общая сумма транзакций за месяц
-    - total_count — количество транзакций за месяц
-    - all_time_count — общее количество всех транзакций с начала времени
+    - total_amount — общая сумма распределенных токенов STT (с учетом decimals)
 
     :raises IntegrityError: если запись за текущий месяц уже существует
-    :raises Exception: для других ошибок при работе с базой данных
+    :raises Exception: для других ошибок при работе с базой данных или контрактом
     """
     today = date.today()
     year, month = today.year, today.month
@@ -177,45 +182,45 @@ async def calculate_monthly_stats():
 
     logger.info(f"Начинаем сбор статистики за {month:02}.{year}")
 
-    async with get_db_session() as session:
-        try:
-            # Транзакции за текущий месяц
-            query = (
-                select(Transaction)
-                .where(Transaction.created_at >= first_day)
-                .where(Transaction.created_at <= last_day)
-            )
-            result = await session.execute(query)
-            txs = result.scalars().all()
+    STT_SERVICE_DISTRIBUTOR_ADDRESS = "0xa6aD0a03D7873A9b9CF49648ae2563Ca7F031f6a"
+    distributor_contract = web3.eth.contract(address=Web3.to_checksum_address(STT_SERVICE_DISTRIBUTOR_ADDRESS), abi=ABI)
 
-            total_amount = sum(tx.amount for tx in txs)
-            total_count = len(txs)
+    loop = asyncio.get_running_loop()
+    executor = ThreadPoolExecutor()
 
-            logger.info(f"Транзакций за месяц: {total_count}, общая сумма: {total_amount:.2f}")
+    try:
+        logger.debug("Вызов метода контракта: getTotalDistributedInTokens(9)")
+        total_amount_raw = await loop.run_in_executor(
+            executor,
+            lambda: distributor_contract.functions.getTotalDistributedInTokens(9).call()
+        )
+        
+        logger.info(f"Получено из контракта: total_amount_raw (tokens) = {total_amount_raw}")
+        
+        total_amount = round(total_amount_raw / 1300000, 3)
+        logger.info(f"После деления на 1300000: total_amount = {total_amount}")
 
-            # Общее количество всех транзакций за всю историю
-            all_time_count_result = await session.execute(select(func.count(Transaction.id)))
-            all_time_count = all_time_count_result.scalar()
+        # Сохраняем статистику в БД
+        async with get_db_session() as session:
+            try:
+                stat = MonthlyStats(
+                    year=year,
+                    month=month,
+                    total_amount=total_amount,
+                )
 
-            logger.info(f"Общее количество всех транзакций: {all_time_count}")
+                session.add(stat)
+                await session.commit()
 
-            # Сохраняем статистику
-            stat = MonthlyStats(
-                year=year,
-                month=month,
-                total_amount=total_amount,
-                total_count=total_count,
-                all_time_count=all_time_count,
-            )
+                logger.info(f"Статистика успешно сохранена за {month:02}.{year}: total_amount = {total_amount}")
 
-            session.add(stat)
-            await session.commit()
+            except IntegrityError:
+                logger.warning(f"Статистика за {month:02}.{year} уже существует в базе данных.")
+                raise
+            except Exception as e:
+                logger.error(f"Ошибка при сохранении статистики: {e}")
+                raise
 
-            logger.info(f"Статистика успешно сохранена за {month:02}.{year}")
-
-        except IntegrityError:
-            logger.warning(f"Статистика за {month:02}.{year} уже существует в базе данных.")
-            raise
-        except Exception as e:
-            logger.error(f"Ошибка при сохранении статистики: {e}")
-            raise
+    except Exception as e:
+        logger.error(f"Ошибка при вызове метода контракта getTotalDistributedInTokens: {repr(e)}")
+        raise
